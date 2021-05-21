@@ -5,6 +5,7 @@
 # This program asks the user to input a number and then
 # calculates and displays the factorial of that number
 
+# ask user to input a whole number
 number_as_string = input("Enter a whole number: ")
 
 
@@ -18,10 +19,13 @@ def main():
         number_as_int = int(number_as_string)
 
         if (number_as_int < 0):
+            # check if number is negative
             print("{} is not a whole number.". format(number_as_int))
         elif (number_as_int == 0):
+            # check if number is 0
             print("0! = 1")
         else:
+            # calculate the factorial
             while True:
                 counter = counter + 1
                 factorial = factorial * counter
@@ -31,9 +35,11 @@ def main():
                     break
 
             print("")
+            # display the factorial of the number
             print("{0}! = {1}". format(number_as_int, factorial))
 
     except ValueError:
+        # error message
         print("{} is not a whole number.". format(number_as_string))
 
 
